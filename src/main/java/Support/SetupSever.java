@@ -9,16 +9,17 @@ public class SetupSever {
     {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "iOS");
-        caps.setCapability("platformVersion", "11.1");
+        caps.setCapability("platformVersion", "11.2");
         caps.setCapability("deviceName", "iPad Air");
-        caps.setCapability("noReset", true  );
+        caps.setCapability("noReset", true);
         caps.setCapability("automationName", "XCUITest");
+        caps.setCapability("bundleId", "com.floware.universalflo.dev");
         final String dir = System.getProperty("user.dir");
         System.out.println("current dir = " + dir);
         caps.setCapability("app",
                 dir + "/automation/Flo.app");
 
-        URL remoteUrl = new URL("http://127.0.0.1:4723/wd/hub");
+        URL remoteUrl = new URL("http://0.0.0.0:4723/wd/hub");
 
         driver = new IOSDriver(remoteUrl, caps);
     }
