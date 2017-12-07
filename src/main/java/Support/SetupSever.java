@@ -18,7 +18,7 @@ public class SetupSever {
         caps.setCapability("app",
                 dir + "/automation/Flo.app");
 
-        URL remoteUrl = new URL("http://0.0.0.0:4723/wd/hub");
+        URL remoteUrl = new URL("http://127.0.0.1:4723/wd/hub");
 
         driver = new IOSDriver(remoteUrl, caps);
     }
