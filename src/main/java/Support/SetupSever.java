@@ -1,10 +1,26 @@
 package Support;
+import Modules.Authorize.ElementInspector;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
-public class SetupSever {
+public class SetupSever implements ElementInspector {
     public static IOSDriver driver;
+    public String service ="https://hooks.slack.com/services/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";
+    public String channel = "#automation";
+    public String sender = "Automation";
+
+    public MobileElement findElementByName(String name) throws Exception {
+        try {
+            MobileElement element = (MobileElement) driver.findElementByAccessibilityId(name);
+            return element;
+        } catch (Exception e) {
+            System.out.println("Could not found element with name : " + name);
+            throw e;
+        }
+    }
+
     public static void SetUp()throws MalformedURLException
     {
         DesiredCapabilities caps = new DesiredCapabilities();
