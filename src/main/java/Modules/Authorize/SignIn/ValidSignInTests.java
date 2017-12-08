@@ -37,6 +37,7 @@ public class ValidSignInTests {
         try {
             MobileElement element = this.inspector.findElementByName("Password");
             element.setValue(password);
+            signIn();
         } catch (Exception e) {
             reporter.report(e.getLocalizedMessage());
         }
@@ -46,7 +47,6 @@ public class ValidSignInTests {
         try {
             MobileElement element = this.inspector.findElementByName("Username");
             element.setValue(username);
-
         } catch (Exception e) {
             reporter.report(e.getLocalizedMessage());
         }
