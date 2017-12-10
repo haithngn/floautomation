@@ -1,8 +1,10 @@
 package Modules.Mail;
 
 import Modules.Authorize.SignIn.ValidSignInTests;
+import Modules.Environments.TabletCapabilities;
 import Report.RemoteReporter;
 import Report.RemoteReporterImpl;
+import Support.Capabilities;
 import Support.SetupSever;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.Keys;
@@ -14,7 +16,8 @@ import java.io.IOException;
 public class MailComposerTests extends SetupSever {
     @BeforeMethod
     public void setUp() throws IOException {
-        super.SetUp();
+        TabletCapabilities capabilities = new TabletCapabilities();
+        super.SetUp(capabilities);
     }
 
     @Test
@@ -118,9 +121,27 @@ public class MailComposerTests extends SetupSever {
             String xPath = "//XCUIElementTypeNavigationBar[@name=\"New Message\"]/XCUIElementTypeButton[3]";
             MobileElement element = this.findElementByXPath(xPath);
             element.click();
+
+            createEvent();
         } catch (Exception e) {
             reporter.report(e.getLocalizedMessage());
         }
     }
+
+    private void createEvent() {
+        try {
+            MobileElement emailsBtn = this.findElementByName("Events");
+            emailsBtn.click();
+            emailsBtn.click();
+            inputSummary();
+        } catch (Exception e) {
+
+        }
+    }
+
+    private void inputSummary() {
+
+    }
+
 
 }

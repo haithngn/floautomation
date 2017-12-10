@@ -25,7 +25,7 @@ public class ValidSignInTests {
             MobileElement signBtn = this.inspector.findElementByName("Existing User");
             signBtn.click();
 
-            inputUsr("analytics");
+            inputUsr("sender30");
             inputPwd("111111");
 
         } catch (Exception e) {

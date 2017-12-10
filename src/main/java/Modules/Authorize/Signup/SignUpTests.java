@@ -1,5 +1,6 @@
 package Modules.Authorize.Signup;
 import Modules.Authorize.ValidSignupTests;
+import Modules.Environments.TabletCapabilities;
 import Report.RemoteReporter;
 import Report.RemoteReporterImpl;
 import Support.SetupSever;
@@ -18,7 +19,8 @@ public class SignUpTests extends SetupSever{
 
     @BeforeMethod
     public void setUp() throws IOException {
-        super.SetUp();
+        TabletCapabilities capabilities = new TabletCapabilities();
+        super.SetUp(capabilities);
     }
 
     @Test

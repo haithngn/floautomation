@@ -1,6 +1,7 @@
 package Modules.Authorize.SignIn;
 
 import Modules.Authorize.ValidSignupTests;
+import Modules.Environments.TabletCapabilities;
 import Report.RemoteReporter;
 import Report.RemoteReporterImpl;
 import Support.SetupSever;
@@ -19,7 +20,10 @@ public class SignInTests extends SetupSever {
 
     @BeforeMethod
     public void setUp() throws IOException {
-        super.SetUp();
+        TabletCapabilities capabilities = new TabletCapabilities("iOS", "10.0",
+                "iPad Air 10", false, "XCUITest", false,
+                "Portrait");
+        super.SetUp(capabilities);
     }
 
     @Test
