@@ -4,10 +4,10 @@ import Modules.Authorize.ValidSignupTests;
 import Modules.Environments.TabletCapabilities;
 import Report.RemoteReporter;
 import Report.RemoteReporterImpl;
-import Support.SetupSever;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import Support.*;
 
 import java.io.IOException;
 

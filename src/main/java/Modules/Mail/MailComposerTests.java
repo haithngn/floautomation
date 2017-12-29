@@ -1,10 +1,7 @@
 package Modules.Mail;
 
-import Modules.Authorize.SignIn.ValidSignInTests;
+import Modules.Authorize.SignIn.newValidSignInTests;
 import Modules.Environments.TabletCapabilities;
-import Report.RemoteReporter;
-import Report.RemoteReporterImpl;
-import Support.Capabilities;
 import Support.SetupSever;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.Keys;
@@ -22,7 +19,8 @@ public class MailComposerTests extends SetupSever {
 
     @Test
     public void signin() {
-        ValidSignInTests tests = new ValidSignInTests(this, this.reporter);
+        newValidSignInTests tests = new newValidSignInTests();
+//        newValidSignInTests tests = new newValidSignInTests(this, this.reporter);
         tests.execute();
         openComposer();
     }

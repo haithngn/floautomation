@@ -1,0 +1,35 @@
+{
+  "iPadAir":
+  {
+    "platformName": "iOS",
+    "platformVersion": "11.2",
+    "deviceName": "iPad Air",
+    "automationName": "XCUITest",
+    "orientation": "Portrait",
+    "app": "/Users/macbookair/Desktop/FloApp/Flo.app",
+    "noReset": true,
+    "url"    : "http://0.0.0.0:4723/wd/hub"
+  },
+  "iPadAir2":
+  {
+    "platformName": "iOS",
+    "platformVersion": "11.2",
+    "deviceName": "iPad Air2",
+    "automationName": "XCUITest",
+    "orientation": "Portrait",
+    "app": "/Users/macbookair/Desktop/FloApp/Flo.app",
+    "noReset": true,
+    "url"    : "http://0.0.0.0:4723/wd/hub"
+  },
+  "iPhone6s":
+  {
+    "platformName": "iOS",
+    "platformVersion": "11.2",
+    "deviceName": "iPhone 6s",
+    "automationName": "XCUITest",
+    "orientation": "Portrait",
+    "app": "/Users/macbookair/Desktop/FloApp/Flo.app",
+    "noReset": true,
+    "url"    : "http://0.0.0.0:4723/wd/hub"
+  }
+}
