@@ -23,12 +23,10 @@ public class SetupSever implements ElementInspector {
         caps.setCapability("noReset", capabilities.getNoReset());
         caps.setCapability("automationName", capabilities.getAutomationName());
         caps.setCapability("showXcodeLog", capabilities.getShowXcodeLog());
-        // caps.setCapability("orientation", "LANDSCAPE");
-        // caps.setCapability("uuid", "AC114C34-A1C9-481F-9581-1DF587504AA9");
 
         final String dir = System.getProperty("user.dir");
         System.out.println("current dir = " + dir);
-        caps.setCapability("app", "/Users/neo/Library/Developer/Xcode/DerivedData/Flo-hhwvjeglcynnoudvxoslwcwadice/Build/Products/Automation-iphonesimulator/Flo.app");
+        caps.setCapability("app", "/Users/macbookair/Desktop/FloApp/Flo.app");
 
         URL remoteUrl = new URL("http://0.0.0.0:4723/wd/hub");
 

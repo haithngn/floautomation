@@ -62,7 +62,7 @@ public class InputSignUpTests {
             MobileElement element = this.inspector.findElementByName(txtUsrPlaceholder);
 
             //Given
-            element.setValue("   ");
+            element.setValue(" $%^&*  ");
 
             //then
             MobileElement signUpBtn = this.inspector.findElementByName(btnSignUp);
@@ -72,6 +72,9 @@ public class InputSignUpTests {
 
             MobileElement cancelBtn = this.inspector.findElementByName(btnSignUp);
             cancelBtn.click();
+
+
+            report("Captain!, Case input invalid username is now still working good!");
         } catch (Exception e) {
             reporter.report(txtUsrPlaceholder + "Could not be found");
         }

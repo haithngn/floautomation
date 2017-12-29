@@ -24,10 +24,16 @@ public class ValidSignInTests {
         try {
             MobileElement signBtn = this.inspector.findElementByName("Existing User");
             signBtn.click();
-
             inputUsr("sender30");
+        } catch (Exception e) {
+            reporter.report(e.getLocalizedMessage());
+        }
+    }
+    private void inputUsr(String username) {
+        try {
+            MobileElement element = this.inspector.findElementByName("Username");
+            element.setValue(username);
             inputPwd("111111");
-
         } catch (Exception e) {
             reporter.report(e.getLocalizedMessage());
         }
@@ -38,15 +44,6 @@ public class ValidSignInTests {
             MobileElement element = this.inspector.findElementByName("Password");
             element.setValue(password);
             signIn();
-        } catch (Exception e) {
-            reporter.report(e.getLocalizedMessage());
-        }
-    }
-
-    private void inputUsr(String username) {
-        try {
-            MobileElement element = this.inspector.findElementByName("Username");
-            element.setValue(username);
         } catch (Exception e) {
             reporter.report(e.getLocalizedMessage());
         }

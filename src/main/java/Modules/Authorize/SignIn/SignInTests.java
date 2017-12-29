@@ -5,6 +5,7 @@ import Modules.Environments.TabletCapabilities;
 import Report.RemoteReporter;
 import Report.RemoteReporterImpl;
 import Support.SetupSever;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -20,8 +21,8 @@ public class SignInTests extends SetupSever {
 
     @BeforeMethod
     public void setUp() throws IOException {
-        TabletCapabilities capabilities = new TabletCapabilities("iOS", "10.0",
-                "iPad Air 10", false, "XCUITest", false,
+        TabletCapabilities capabilities = new TabletCapabilities("iOS", "11.2",
+                "iPad Air", false, "XCUITest", false,
                 "Portrait");
         super.SetUp(capabilities);
     }
@@ -31,5 +32,10 @@ public class SignInTests extends SetupSever {
         RemoteReporter reporter = new RemoteReporterImpl(this.service, this.channel,this.sender);
         ValidSignInTests tests = new ValidSignInTests(this, reporter);
         tests.execute();
+    }
+
+    @AfterMethod
+    public void cleanUp(){
+
     }
 }

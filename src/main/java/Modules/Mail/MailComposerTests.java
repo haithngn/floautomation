@@ -32,11 +32,13 @@ public class MailComposerTests extends SetupSever {
             MobileElement emailsBtn = this.findElementByName("Emails");
             emailsBtn.click();
             emailsBtn.click();
-            expandRecipients();
+//            expandRecipients();
+            inputToRecipient();
         } catch (Exception e) {
 
         }
     }
+
 
     private void expandRecipients() {
         try {
@@ -57,7 +59,6 @@ public class MailComposerTests extends SetupSever {
             element.sendKeys(Keys.ENTER);
 
             inputCCRecipient();
-
         } catch (Exception e) {
             reporter.report(e.getLocalizedMessage());
         }
@@ -121,7 +122,6 @@ public class MailComposerTests extends SetupSever {
             String xPath = "//XCUIElementTypeNavigationBar[@name=\"New Message\"]/XCUIElementTypeButton[3]";
             MobileElement element = this.findElementByXPath(xPath);
             element.click();
-
             createEvent();
         } catch (Exception e) {
             reporter.report(e.getLocalizedMessage());
