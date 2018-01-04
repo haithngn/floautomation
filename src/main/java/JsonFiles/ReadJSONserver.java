@@ -25,7 +25,8 @@ public class ReadJSONserver {
             noReset = (Boolean) Key.get("noReset");
             url = (String) Key.get("url");
             app = (String) Key.get("app");
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -6,7 +6,8 @@ public class TabletCapabilities extends CapacibilityAbstract {
         super();
     }
 
-    public TabletCapabilities(String platformName, String platformVersion, String deviceName, Boolean noReset, String automationName, Boolean showXcodeLog, String orientation) {
+    public TabletCapabilities(String platformName, String platformVersion, String deviceName, Boolean noReset,
+                              String automationName, Boolean showXcodeLog, String orientation) {
         super(platformName, platformVersion, deviceName, noReset, automationName, showXcodeLog, orientation);
     }
 }

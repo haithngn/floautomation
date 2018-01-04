@@ -2,7 +2,6 @@ package Modules.Authorize.SignIn;
 
 import Modules.Authorize.ElementInspector;
 import Report.RemoteReporter;
-import Support.NewSetupSever;
 import io.appium.java_client.MobileElement;
 
 public class ValidSignInTests{
@@ -25,7 +24,6 @@ public class ValidSignInTests{
         try {
             MobileElement signBtn = this.inspector.findElementByName("Existing User");
             signBtn.click();
-
             inputUsr("sender30");
             inputPwd("111111");
             signIn();
